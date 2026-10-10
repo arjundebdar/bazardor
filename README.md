@@ -9,7 +9,6 @@
 - **🛍️ Product Details:** Explore product information and market-based prices.
 - **📂 Category Filtering & Sorting:** Browse products by category and sort them by price.
 - **🔐 Authentication:** Sign up, sign in, and social login using Better Auth.
-- **👤 Profile Management:** View and update user information.
 - **📱 Responsive Design:** Optimized for mobile, tablet, and desktop devices.
 - **🔔 Toast Notifications:** Get feedback for authentication actions and errors.
 - **⏳ Loading States:** Display loading indicators while fetching data.
@@ -28,12 +27,6 @@
 - Vercel — Deployment
 - Git & GitHub — Version control
 
-## 🔗 API
-
-**Base URL:**
-
-`https://api.abcz.workers.dev/api/bazardor`
-
 | Endpoint | Description |
 |---|---|
 | `/products` | Get all products |
@@ -42,47 +35,6 @@
 | `/categories` | Get all categories |
 | `/categories/chal` | Get a single category |
 
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/arjundebdar/bazardor.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd bazardor
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Configure environment variables
-
-Create a `.env.local` file in the project root and add the environment variables required by your application.
-
-For example:
-
-```env
-BETTER_AUTH_URL=http://localhost:3000
-BETTER_AUTH_SECRET=your_secret_key
-BETTER_AUTH_DATABASE_URL=your_mongodb_connection_string
-```
-
-Add Google and GitHub OAuth credentials if you use social authentication. Never commit real secrets to GitHub.
-
-
-
-### 6. Build for production
-
-```bash
-npm run build
-```
 
 ## 🌐 Live Demo
 
