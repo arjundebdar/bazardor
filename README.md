@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 বাজার দর | BazarDor
 
-## Getting Started
+**BazarDor** is a responsive Bengali market price application that helps users explore essential products, check daily prices, compare price changes, and browse products by category.
 
-First, run the development server:
+## 🌟 Features
+
+- **🏠 Home Page:** Browse products and explore daily price updates.
+- **📈 Price Trends:** View products with increased or decreased prices.
+- **🛍️ Product Details:** Explore product information and market-based prices.
+- **📂 Category Filtering & Sorting:** Browse products by category and sort them by price.
+- **🔐 Authentication:** Sign up, sign in, and social login using Better Auth.
+- **👤 Profile Management:** View and update user information.
+- **📱 Responsive Design:** Optimized for mobile, tablet, and desktop devices.
+- **🔔 Toast Notifications:** Get feedback for authentication actions and errors.
+- **⏳ Loading States:** Display loading indicators while fetching data.
+- **🚫 Custom 404 Page:** Show a friendly message for unavailable pages.
+
+## 🛠️ Technologies Used
+
+- Next.js 16 — React framework
+- React — UI development
+- JavaScript — Application logic
+- Tailwind CSS — Styling
+- DaisyUI — UI components
+- Better Auth — Authentication
+- MongoDB — Database
+- REST API — Product and category data
+- Vercel — Deployment
+- Git & GitHub — Version control
+
+## 🔗 API
+
+**Base URL:**
+
+`https://api.abcz.workers.dev/api/bazardor`
+
+| Endpoint | Description |
+|---|---|
+| `/products` | Get all products |
+| `/products?category=chal` | Filter products by category |
+| `/products/1` | Get a single product |
+| `/categories` | Get all categories |
+| `/categories/chal` | Get a single category |
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/arjundebdar/bazardor.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Navigate to the project
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+cd bazardor
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Configure environment variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file in the project root and add the environment variables required by your application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For example:
 
-## Deploy on Vercel
+```env
+BETTER_AUTH_URL=http://localhost:3000
+BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_DATABASE_URL=your_mongodb_connection_string
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add Google and GitHub OAuth credentials if you use social authentication. Never commit real secrets to GitHub.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+### 6. Build for production
+
+```bash
+npm run build
+```
+
+## 🌐 Live Demo
+
+**Live Website:** https://bazardor-seven.vercel.app/
+
+**GitHub Repository:** [arjundebdar/bazardor](https://github.com/arjundebdar/bazardor)
+
+## 👨‍💻 Author
+
+**Arjun Deb Nath**
+
+GitHub: [@arjundebdar](https://github.com/arjundebdar)
+
+---
+
