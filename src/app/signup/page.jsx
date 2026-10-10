@@ -36,7 +36,7 @@ export default function RegisterPage() {
         }
 
         if (formData.password.length < 6) {
-            const msg = "Password must be at least 6 characters long.";
+            const msg = "পাসওয়ার্ড অবশ্যই ৬ সংখ্যার উপরে হতে হবে।.";
             setErrorMsg(msg);
             toast.error(msg);
             return;
@@ -44,7 +44,7 @@ export default function RegisterPage() {
 
         // Password Recheck Validation
         if (formData.password !== formData.confirmPassword) {
-            const msg = "Passwords do not match!";
+            const msg = "পাসওয়ার্ড মিলে নি!";
             setErrorMsg(msg);
             toast.error(msg);
             return;
