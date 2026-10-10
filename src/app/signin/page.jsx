@@ -6,7 +6,7 @@ import Link from "next/link";
 import { signIn } from "@/lib/auth-client";
 import toast from "react-hot-toast";
 
-export default function LoginPage() {
+export default function Signinpages() {
     const router = useRouter();
     const [formData, setFormData] = useState({ email: "", password: "" });
     const [errorMsg, setErrorMsg] = useState("");
@@ -22,10 +22,18 @@ export default function LoginPage() {
             });
 
             if (error) {
-                toast.error("ইউজার বা পাসওয়ার্ড সঠিক নয়!");
+                toast.error("ইউজার বা পাসওয়ার্ড সঠিক নয়!");
             } else {
-                toast.success("সাইন ইন সফল হয়েছে!");
-                router.push("/"); // Navigate to home
+                toast.success("সাইন ইন সফল হয়েছে!");
+
+                // ইউজার যে প্রোডাক্টে ক্লিক করেছিল তার ID লোকাল স্টোরেজ থেকে নিয়ে সেখানে রিডাইরেক্ট করা হচ্ছে
+                const savedProductId = localStorage.getItem("redirectProductId");
+                if (savedProductId) {
+                    localStorage.removeItem("redirectProductId"); // ব্যবহার করার পর মুছে ফেলা ভালো
+                    router.push(`/productsdetails/${savedProductId}`);
+                } else {
+                    router.push(`/productsdetails/1`); // ডিফল্ট কোনো আইডি না থাকলে
+                }
             }
         } catch (err) {
             toast.error(err?.message || "লগইন ফেইল");
