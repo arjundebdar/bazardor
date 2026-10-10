@@ -22,9 +22,7 @@ export default function LoginPage() {
             });
 
             if (error) {
-                const msg = error.message || "Invalid credentials.";
-                setErrorMsg(msg);
-                toast.error(msg);
+                toast.error("ইউজার বা পাসওয়ার্ড সঠিক নয়!");
             } else {
                 toast.success("সাইন ইন সফল হয়েছে!");
                 router.push("/"); // Navigate to home
