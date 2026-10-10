@@ -33,7 +33,7 @@ const toBanglaNumber = (number) => {
 const ProductDetailPage = async ({ params }) => {
     const { id } = await params;
 
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products/${id}`, {
+    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products/${id}`, {
         next: {
             revalidate: 3600,
         },

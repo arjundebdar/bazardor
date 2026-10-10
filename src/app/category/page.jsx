@@ -21,7 +21,7 @@ const getBanglaUnit = (unit) => {
 
 const CategoryPages = async ({ params }) => {
     const { id } = await params;
-    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products?category/${id}`, {
+    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/categories/${id}`, {
         next: {
             revalidate: 3600
         }

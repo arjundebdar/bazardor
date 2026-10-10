@@ -30,7 +30,7 @@ const CategoryPages = async ({ params, searchParams }) => {
     const resolvedSearchParams = await searchParams;
     const sortOption = resolvedSearchParams.sort || "default";
 
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products?category=${id}`, {
+    const res = await fetch(`https://api.abcz.workers.dev/api/bazardor/products?category=${id}`, {
         next: {
             revalidate: 3600
         }
