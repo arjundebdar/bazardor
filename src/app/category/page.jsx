@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+export const instant = false;
 const toBanglaNumber = (number) => {
     if (number === undefined || number === null || isNaN(number)) return '০';
     return number

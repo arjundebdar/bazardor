@@ -41,7 +41,7 @@ const PriceTicker = async () => {
     const tickerItems = [...datas, ...datas];
 
     return (
-        <div className="overflow-hidden border-t border-b border-dotted py-2.5 mt-2 bg-white shadow-sm">
+        <div className="overflow-hidden border-t border-b border-dotted py-2.5 mt-2 bg-white shadow-sm ">
             <div className="flex w-max gap-8 animate-ticker">
                 {tickerItems.map((data, index) => {
                     const pct = data?.change?.pct ? Math.abs(data.change.pct) : 0;
